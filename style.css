@@ -1,0 +1,783 @@
+
+    *{
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          padding: 0;
+          margin: 0;
+      }
+      :root {
+        --green-color : #3CAB90;
+        --yellow-color :  #FFBB1C;
+        --p-color :#475467;
+    }
+      
+      html {
+          scroll-behavior: smooth;
+      }
+      
+      body {
+          font-family: "Open Sans", sans-serif;
+      }
+      
+      
+      ul {
+          list-style: none;
+      }
+      
+      .container {
+          padding-left: 15px;
+          padding-right: 15px;
+          margin-left: auto;
+          margin-right: auto;
+      } 
+      
+       @media (min-width :768px) {
+          .container {
+            width: 750px;
+          }
+       }
+      
+       @media (min-width :992px) {
+          .container {
+            width: 970px;
+          }
+       }
+      
+       @media (min-width :1200px) {
+          .container {
+            width: 1170px;
+          }
+       }
+/*------------------- start header--------------------*/
+
+header {
+    color: white;
+    background-color:var(--green-color);
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+ }
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    min-height: 97px;
+}
+
+/* header .container::after{
+    content: "";
+    position: absolute;
+    width: calc(100% - 30px);
+    height: 1px;
+    background-color:#a2a2a2;
+    bottom: 0px;
+     left: 15px;
+
+} */
+
+header .container .logo img {
+height: 40px;
+}
+
+
+header .container nav {
+    flex: 1;
+    display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+header .container nav ul {
+    display: flex;
+    margin: auto;
+    
+}
+
+header .container nav ul li {
+    text-transform: uppercase;
+}
+
+header .container nav ul li a {
+    display: block;
+   text-decoration: none;
+   font-size: 14px;
+   color: white;
+   padding: 15px;
+   transition: 0.3s;
+   position: relative;
+   z-index: 2;
+}
+
+header .container nav li:hover {
+    background: #0000000F;
+    border-radius: 3px;
+    border-bottom: 3px solid #0000004D;
+}
+
+header nav .toggle-menu {
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    }
+    
+     @media (min-width : 768px){
+        header nav .toggle-menu  {
+            display: none;
+        }
+    }
+    
+    @media (max-width:767px) {
+        header .container {
+            width: 100%;
+        }
+        header .container nav ul {
+            display: none;
+        }
+        header .container .contact {
+            display: none;
+        }
+        header .container nav {
+            justify-content: flex-end;
+        }
+    }
+     
+    header nav .toggle-menu:hover + ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.50);
+    }
+    
+    header nav .toggle-menu:hover + ul li a {
+        padding: 15px;
+    }
+
+
+/*------------------- end header--------------------*/
+
+/*-------------------start section_one--------------------*/
+.section_one {
+  background-image: url(Images/solar-panels-meadow\ 1.png);
+  background-size: cover;
+  height: 700px;
+  padding-top: 50px;
+}
+
+.section_one .container {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+.section_one .container .line {
+margin-bottom: 20px;
+display: flex;
+justify-content: space-between;
+width: 40%;
+}
+
+.num1 {
+position: relative;
+}
+
+.num1::before {
+    position: absolute;
+    content: "";
+    width: 80px;
+    height: 3px;
+    background-color: white;
+    top: 49%;
+    left: 30px;
+}
+
+.num2::after {
+    position: absolute;
+    content: "";
+    width: 140px;
+    height: 3px;
+    background-color:gray;
+    left: 300px;
+    top: 170.5px;
+}
+
+.section_one h1 {
+    font-size: 40px;
+}
+.section_one .content {
+    width: 60%;
+}
+
+.section_one .container p {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    line-height: 1.5;
+}
+
+.section_one .call button {
+padding: 7px 30px;
+border-radius: 10px;
+border: none;
+margin-right: 20px;
+cursor: pointer;
+}
+
+.first {
+  background-color:var(--green-color);
+  color: white;
+}
+.second {
+  background-color:var(--yellow-color);
+}
+
+@media (max-width:767px) {
+    .section_one .container {
+        text-align: center;
+    }
+    .section_one .content {
+        width: 100%;
+    }
+    
+    .section_one .call .second {
+        margin: 10px auto;
+    }
+    .section_one .container .line {
+        width: 90%;
+        text-align: center;
+    }
+    .num1::before{
+        width: 105px;
+        left: 30px;
+    }
+    .num2::after {
+        width: 40%;
+        top: 170px;
+        left: 150px;
+    }
+    
+}
+
+/*-------------------end section_one--------------------*/
+
+
+/*-------------------start section_two--------------------*/
+.section_two .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px;
+}
+.section_two .container .content-text {
+width: 40%;
+}
+
+.section_two .content-text h2 {
+font-size: 42px;
+}
+.section_two .content-text p {
+    padding-top: 20px;
+    font-size: 16px;
+    color: var(--p-color);
+}
+
+.section_two .collaborate {
+    position: relative;
+    margin-left: 40px;
+    margin-top: 30px;
+}
+.section_two .collaborate p {
+    font-size: 20px;
+    font-weight:bold;
+    }
+
+.section_two .collaborate span::before {
+position: absolute;
+content: attr(data-progress);
+color:#84BD3A;
+left: -40px;
+
+}
+
+.section_two .image img {
+    width: 400px;
+}
+
+@media (max-width:767px) {
+    .section_two {
+        background-image: url("Images/Rectangle 30.png");
+        background-size: cover;
+    }
+    .section_two .container {
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    .section_two .container .content-text {
+        width: 100%;
+    }
+    .section_two .content-text h2  {
+       font-size: 30px;
+    }  
+    .section_two .content-text p {
+        color: black;
+    } 
+    .section_two .image {
+        display: none;
+    }
+}
+
+/*-------------------end section_two--------------------*/
+ 
+/*-------------------start section_three--------------------*/
+
+.section_three {
+    margin-top: 30px;
+    background-image: url(Images/8116\ 1.png);
+    background-size: cover;
+    height: 500px;
+}
+
+.section_three .container {
+    color: white;
+}
+
+.section_three .content {
+    width: 60%;
+}
+.section_three h2 {
+    padding-top: 120px;
+    font-size: 42px;
+}
+.section_three p {
+    font-size: 20px;
+    padding: 40px 0px;
+}
+
+.section_three .callUs {
+    background-color: var(--yellow-color) ;
+    padding: 7px 30px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width:767px) {
+    .section_three .content {
+        width: 100%;
+    }
+    .section_three .content .callUs {
+        margin-left: 30%;
+    }
+    
+}
+/*-------------------end section_three--------------------*/
+
+/*-------------------start solar- kits--------------------*/
+
+
+.heading {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 900px;
+margin: 50px auto;
+}
+
+ .heading h2 {
+    font-size: 42px;
+}
+ .heading p {
+margin-top: 20px;
+color: var(--p-color);
+line-height: 25px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    grid-column-gap : 40px;
+}
+
+.card {
+background-color:rgb(252, 252, 252);
+}
+.card img {
+    width: 100%;
+}
+
+.card .card-text {
+    padding: 15px;
+}
+.card p {
+    font-size: 16px;
+    color: var(--p-color);
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.card a {
+    color: var(--green-color);
+    text-decoration: none;
+}
+
+a i {
+    margin-left: 5px;
+}
+
+@media (max-width:767px) {
+    .solar_kits .heading {
+        width: 100%;
+        text-align: center;
+    }
+    
+}
+
+/*-------------------end solar- kits--------------------*/
+
+/*-------------------start repairs--------------------*/
+.repairs {
+margin-top: 50px;
+background-image: url(Images/f9051aa0f59b3d4c3427f2e1c580add2.png);
+background-size: cover;
+height: 500px;
+position: relative;
+}
+
+.repairs .approach {
+    color: white;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.589);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    
+}
+
+.repairs .approach .content-text {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 15px;
+}
+.repairs h2 {
+    font-size: 42px;
+}
+.repairs p {
+    padding: 25px 20px;
+    font-size:  20px;
+    text-align: center;
+}
+
+@media (max-width:767px) {
+    .repairs h2 {
+        font-size: 20px;
+    }
+    .repairs p {
+        font-size: 17px;
+    }
+    .repairs .approach {
+        width: 100%;
+    }
+    
+}
+
+/*-------------------end repairs--------------------*/
+
+/*-------------------start products--------------------*/
+
+.products {
+background-color: rgb(246, 239, 230);
+padding-top: 50px;
+padding-bottom: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.products .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    grid-column-gap : 40px;
+}
+.products .icon {
+    width: 60px;
+}
+.products h3 {
+    font-size: 42px;
+}
+
+.products p {
+    margin-top: 20px;
+}
+
+ .box {
+    border: 2px solid var(--green-color);
+    border-radius: 10px;
+    padding: 20px;
+    height: 300px;
+    margin-top: 20px;
+    background: #3CAB900F;
+}
+
+.products .image {
+    text-align: center;
+}
+.products img {
+    width: 90%;  
+}
+
+.box h4 {
+    padding: 10px 0px;
+}
+
+
+.products .content a {
+    color: var(--green-color);
+    display:inline-block ;
+    text-decoration: none;
+    padding-top: 20px;
+}
+
+@media (max-width:767px) {
+    .products .container {
+        text-align: center;
+    }
+}
+
+/*-------------------end products--------------------*/
+
+/*-------------------start values-------------------*/
+
+.Our_values {
+padding-bottom: 50px;
+}
+
+.Our_values .value {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    grid-column-gap : 40px;
+}
+
+@media (max-width:767px) {
+    .Our_values .heading {
+        width: 90%;
+        text-align: center;
+    }
+}
+
+.WOC {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap : 40px;
+    align-items: center;
+}
+.woc h2 {
+    font-size: 48px;
+    padding: 15px 0px ;
+}
+.woc p {
+    font-size: 18px;
+}
+
+.WOC .box .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ 
+.WOC .box {
+    grid-column: span 2;
+    background: #3CAB900F;
+}
+
+.WOC .box .header h6 {
+color: var(--green-color);
+font-size: 16px;
+}
+.WOC .box .body  p {
+    font-size: 25px;
+    padding : 30px 0px;
+}
+ 
+.dots {
+    display: flex;
+}
+
+.dots .dot:first-child {
+    background-color:#475467;
+}
+.WOC .dot
+ {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #D9D9D9;
+    margin-right: 7px;
+    cursor: pointer;
+}
+
+.WOC .profile {
+    display: flex;
+    justify-content: space-between;
+}
+.WOC .left {
+    display: flex;
+    align-items: center;
+}
+.left img {
+    width: 40px;
+}
+.profile .profile_content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+.profile_content h6 {
+    font-size: 16px; 
+}
+
+.right {
+    display: flex;
+}
+.WOC .box .profile .right i {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+@media (max-width:767px) {
+    .WOC {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .WOC .box {
+        height: 350px;
+    }
+}
+
+/*-------------------end values-------------------*/
+
+/*-------------------start footer-------------------*/
+
+.footer {
+    background: #283646;
+    color: white;
+    padding: 20px;
+}
+
+.footer .up {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.footer .up img {
+    width: 190px;
+    padding: 30px 0px;
+}
+
+.footer  ul {
+display: flex;
+list-style: none;
+
+}
+.footer ul li {
+    font-size: 16px;
+    margin-right: 20px;
+}
+.footer  ul li a {
+    color: white;
+    text-decoration: none;
+    
+    text-transform: capitalize;
+}
+.footer .right {
+    display: flex;
+    flex-direction: column
+}
+
+.footer .right .subscribe input {
+padding: 10px;
+margin-top: 20px;
+border: 1px solid white;
+border-radius: 20px;
+border-right: none;
+background-color: transparent;
+height: 25px;
+margin-right: -20px;
+}
+
+.footer .right .subscribe button {
+    background-color: var(--yellow-color);
+    padding: 5px 20px;
+    border-radius: 20px;
+    border-left: none;
+    cursor: pointer;
+    color: white;
+}
+
+.footer .down .privacy {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #92989F;
+}
+
+.footer .down .privacy ul li {
+    position: relative;
+}
+.footer .down .privacy ul li::before {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 100%;
+    background-color:#92989F;
+    right: -10px;
+}
+
+@media (max-width:767px) {
+    .footer .container {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer .up, .privacy {
+        flex-direction: column;
+    }
+    .footer .up, .privacy p {
+        margin-top: 20px;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
